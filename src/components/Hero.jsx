@@ -91,7 +91,7 @@ export default function Hero({ setActive }) {
           View Projects
         </button>
         <a
-          href="mailto:dineshsrisai1@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&to=dineshsrisai1@gmail.com"
           style={{
             padding: isMobile ? "13px 20px" : "9px 20px",
             borderRadius: 10,
