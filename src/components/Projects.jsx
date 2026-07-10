@@ -25,7 +25,7 @@ const projects = [
     statusDot: "#28c840",
     status: "Freelance",
     github: "https://github.com/dineshsrisai/umaShankar",
-    live: "https://umashankar-pff8.vercel.app",
+    live: "https://umashankarprints.vercel.app/",
     glow: "rgba(99, 102, 241, 0.25)",
     glowBorder: "rgba(99, 102, 241, 0.4)",
   },
