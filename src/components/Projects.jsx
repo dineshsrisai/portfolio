@@ -2,32 +2,81 @@ import { ExternalLink, Github } from "lucide-react";
 import TrafficLights from "./TrafficLights";
 import useIsMobile from "./useIsMobile";
 
+const CARD_GLOW = "rgba(99, 102, 241, 0.25)";
+const CARD_GLOW_BORDER = "rgba(99, 102, 241, 0.4)";
+
+const STATUS_COLORS = {
+  building: "#febc2e",
+  live: "#28c840",
+  indigo: "#5e5ce6",
+  purple: "#af52de",
+  teal: "#30b0c7",
+};
+
 const projects = [
   {
-    title: "Dev Tinder",
-    subtitle: "Developer Networking App",
+    title: "DevConnect",
+    subtitle: "Developer Networking Platform",
     description:
-      "Match, and connect with other developers. Real-time chat powered by Socket.io. Deployed on Vercel & Render.",
+      "Match and connect with other developers, then chat in real time over Socket.io. Deployed on Vercel & Render.",
     tech: ["React", "Node.js", "MongoDB", "Socket.io", "Vercel", "Render"],
-    statusDot: "#febc2e",
-    status: "Soon",
+    statusDot: STATUS_COLORS.building,
+    status: "In Progress",
     github: "https://github.com/dineshsrisai/devTinder",
     live: "https://devtinder.in",
-    glow: "rgba(99, 102, 241, 0.25)",
-    glowBorder: "rgba(99, 102, 241, 0.4)",
   },
   {
     title: "UmaShankar Printers",
-    subtitle: "Freelance — Local Business Site",
+    subtitle: "Freelance — Full-Stack Business Site",
     description:
-      "Full website for a local printing & solutions business in Palakol. REST API, MongoDB Atlas, Vercel , Render.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Vercel", "Render"],
-    statusDot: "#28c840",
-    status: "Freelance",
+      "Service site for a local printing & solutions business — a custom Tailwind design, one shared MongoDB schema across service types, and shimmer loading states to smooth over Render's cold starts.",
+    tech: [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind",
+      "Vercel",
+      "Render",
+    ],
+    statusDot: STATUS_COLORS.live,
+    status: "Freelance — Live",
     github: "https://github.com/dineshsrisai/umaShankar",
     live: "https://umashankarprints.vercel.app/",
-    glow: "rgba(99, 102, 241, 0.25)",
-    glowBorder: "rgba(99, 102, 241, 0.4)",
+  },
+  {
+    title: "Tic Tac Toe",
+    subtitle: "2-Player Console Game",
+    description:
+      "Classic 3x3 grid game with win, draw, and turn logic — built to practice core C++ control flow and array handling.",
+    tech: ["C++"],
+    statusDot: STATUS_COLORS.purple,
+    status: "View on GitHub",
+    github: "https://github.com/dineshsrisai/TicTacToe",
+    live: null,
+  },
+  {
+    title: "Snake and Ladders",
+    subtitle: "Dice-Based Board Game",
+    description:
+      "A Snake and Ladders game built using C++ featuring dice rolls, player movement, snake and ladder mechanics, and win detection.",
+    tech: ["C++"],
+    statusDot: STATUS_COLORS.purple,
+    status: "View on GitHub",
+    github: "https://github.com/dineshsrisai/SnakeandLadders",
+    live: null,
+  },
+  {
+    title: "Rock Paper Scissors",
+    subtitle: "Player vs Computer",
+    description:
+      "Round-based game against a randomized computer opponent, with running score tracking across rounds.",
+    tech: ["C++"],
+    statusDot: STATUS_COLORS.purple,
+    status: "View on GitHub",
+    github: "https://github.com/dineshsrisai/RockPaperScissors",
+    live: null,
   },
 ];
 
@@ -70,13 +119,14 @@ export default function Projects() {
 
 function ProjectCard({ project, isMobile }) {
   const handleEnter = (e) => {
-    e.currentTarget.style.boxShadow = `0 0 0 1px ${project.glowBorder}, 0 0 55px 8px ${project.glow}, 0 8px 30px rgba(0,0,0,0.5)`;
+    e.currentTarget.style.boxShadow = `0 0 0 1px ${CARD_GLOW_BORDER}, 0 0 55px 8px ${CARD_GLOW}, 0 8px 30px rgba(0,0,0,0.5)`;
     e.currentTarget.style.transform = "translateY(-2px)";
   };
   const handleLeave = (e) => {
     e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.3)";
     e.currentTarget.style.transform = "translateY(0)";
   };
+  const hasLiveDemo = Boolean(project.live) && project.live !== project.github;
 
   return (
     <div
@@ -103,6 +153,7 @@ function ProjectCard({ project, isMobile }) {
       >
         {isMobile ? (
           <span
+            aria-hidden="true"
             style={{
               width: 8,
               height: 8,
@@ -130,6 +181,7 @@ function ProjectCard({ project, isMobile }) {
             href={project.github}
             target="_blank"
             rel="noreferrer"
+            aria-label={`View ${project.title} source on GitHub`}
             style={{
               color: "#8e8e93",
               display: "flex",
@@ -141,21 +193,24 @@ function ProjectCard({ project, isMobile }) {
           >
             <Github size={14} />
           </a>
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              color: "#8e8e93",
-              display: "flex",
-              textDecoration: "none",
-              transition: "color 0.15s",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#d1d1d6")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#8e8e93")}
-          >
-            <ExternalLink size={14} />
-          </a>
+          {hasLiveDemo && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`View ${project.title} live site`}
+              style={{
+                color: "#8e8e93",
+                display: "flex",
+                textDecoration: "none",
+                transition: "color 0.15s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#d1d1d6")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#8e8e93")}
+            >
+              <ExternalLink size={14} />
+            </a>
+          )}
         </div>
       </div>
 
@@ -170,6 +225,7 @@ function ProjectCard({ project, isMobile }) {
             }}
           >
             <span
+              aria-hidden="true"
               style={{
                 width: 6,
                 height: 6,
