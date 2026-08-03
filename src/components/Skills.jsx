@@ -2,6 +2,11 @@ import useIsMobile from "./useIsMobile";
 
 const stack = [
   {
+    cat: "Programming Languages",
+    items: ["C++"],
+    dot: "#ffffff",
+  },
+  {
     cat: "Frontend",
     items: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
     dot: "#0071e3",
