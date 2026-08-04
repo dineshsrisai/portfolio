@@ -4,12 +4,12 @@ const stack = [
   {
     cat: "Programming Languages",
     items: ["C++"],
-    dot: "#ffffff",
+    dot: "#0071e3",
   },
   {
     cat: "Frontend",
     items: ["React", "Tailwind CSS", "JavaScript", "HTML", "CSS"],
-    dot: "#0071e3",
+    dot: "#ec4899",
   },
   {
     cat: "Backend",
