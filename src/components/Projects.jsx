@@ -57,14 +57,14 @@ const projects = [
     live: null,
   },
   {
-    title: "Snake and Ladders",
-    subtitle: "Dice-Based Board Game",
+    title: "Connect Four",
+    subtitle: "Player vs AI",
     description:
-      "A Snake and Ladders game built using C++ featuring dice rolls, player movement, snake and ladder mechanics, and win detection.",
+      "Terminal-based Connect Four game in C++ featuring Player vs Player and Player vs Computer modes with a simple heuristic AI",
     tech: ["C++"],
     statusDot: STATUS_COLORS.purple,
     status: "View on GitHub",
-    github: "https://github.com/dineshsrisai/SnakeandLadders",
+    github: "https://github.com/dineshsrisai/connectFour",
     live: null,
   },
   {
@@ -76,6 +76,17 @@ const projects = [
     statusDot: STATUS_COLORS.purple,
     status: "View on GitHub",
     github: "https://github.com/dineshsrisai/RockPaperScissors",
+    live: null,
+  },
+  {
+    title: "Snake and Ladders",
+    subtitle: "Dice-Based Board Game",
+    description:
+      "A Snake and Ladders game built using C++ featuring dice rolls, player movement, snake and ladder mechanics, and win detection.",
+    tech: ["C++"],
+    statusDot: STATUS_COLORS.purple,
+    status: "View on GitHub",
+    github: "https://github.com/dineshsrisai/SnakeandLadders",
     live: null,
   },
 ];
