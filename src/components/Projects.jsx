@@ -46,6 +46,17 @@ const projects = [
     live: "https://umashankarprints.vercel.app/",
   },
   {
+    title: "Connect Four",
+    subtitle: "Player vs AI",
+    description:
+      "C++ implementation of Connect Four with multiplayer support and a Minimax AI using heuristic evaluation for intelligent gameplay and tactical decision-making",
+    tech: ["C++"],
+    statusDot: STATUS_COLORS.purple,
+    status: "View on GitHub",
+    github: "https://github.com/dineshsrisai/connectFour",
+    live: null,
+  },
+  {
     title: "Tic Tac Toe",
     subtitle: "2-Player Console Game",
     description:
@@ -54,17 +65,6 @@ const projects = [
     statusDot: STATUS_COLORS.purple,
     status: "View on GitHub",
     github: "https://github.com/dineshsrisai/TicTacToe",
-    live: null,
-  },
-  {
-    title: "Connect Four",
-    subtitle: "Player vs AI",
-    description:
-      "Terminal-based Connect Four game in C++ featuring Player vs Player and Player vs Computer modes with a simple heuristic AI",
-    tech: ["C++"],
-    statusDot: STATUS_COLORS.purple,
-    status: "View on GitHub",
-    github: "https://github.com/dineshsrisai/connectFour",
     live: null,
   },
   {

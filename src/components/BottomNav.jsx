@@ -29,7 +29,7 @@ export default function BottomNav({ active, setActive }) {
         zIndex: 100,
       }}
     >
-      {tabs.map(({ id, label ,Icon}) => {
+      {tabs.map(({ id, label, Icon }) => {
         const isActive = active === id;
         return (
           <button

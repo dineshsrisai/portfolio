@@ -120,7 +120,7 @@ export default function Hero({ setActive }) {
         }}
       >
         {[
-          { val: "2", label: "Projects" },
+          { val: "3", label: "Projects" },
           { val: "1", label: "Client" },
         ].map((stat) => (
           <div
