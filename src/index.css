@@ -6,3 +6,25 @@ html,
 body {
   overscroll-behavior: none;
 }
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a3c #1c1c1e;
+}
+
+/* Webkit (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: #1c1c1e;
+}
+*::-webkit-scrollbar-thumb {
+  background: #3a3a3c;
+  border-radius: 8px;
+  border: 2px solid #1c1c1e;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #48484a;
+}
