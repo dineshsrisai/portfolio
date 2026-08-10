@@ -83,7 +83,7 @@ export default function About() {
           }}
         >
           {[
-            { val: "2", label: "Projects" },
+            { val: "4", label: "Projects" },
             { val: "1", label: "Client" },
           ].map((s, i) => (
             <div
