@@ -57,6 +57,17 @@ const projects = [
     live: null,
   },
   {
+    title: "Sudoku",
+    subtitle: "Console Game",
+    description:
+      "Console-based Sudoku puzzle solver in C++ with grid validation and constraint-checking logic — built to practice 2D array manipulation and backtracking fundamentals.",
+    tech: ["C++"],
+    statusDot: STATUS_COLORS.purple,
+    status: "View on GitHub",
+    github: "https://github.com/dineshsrisai/Sudoku",
+    live: null,
+  },
+  {
     title: "Tic Tac Toe",
     subtitle: "2-Player Console Game",
     description:
