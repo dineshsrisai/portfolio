@@ -67,39 +67,6 @@ const projects = [
     github: "https://github.com/dineshsrisai/Sudoku",
     live: null,
   },
-  {
-    title: "Tic Tac Toe",
-    subtitle: "2-Player Console Game",
-    description:
-      "Classic 3x3 grid game with win, draw, and turn logic — built to practice core C++ control flow and array handling.",
-    tech: ["C++"],
-    statusDot: STATUS_COLORS.purple,
-    status: "View on GitHub",
-    github: "https://github.com/dineshsrisai/TicTacToe",
-    live: null,
-  },
-  {
-    title: "Rock Paper Scissors",
-    subtitle: "Player vs Computer",
-    description:
-      "Round-based game against a randomized computer opponent, with running score tracking across rounds.",
-    tech: ["C++"],
-    statusDot: STATUS_COLORS.purple,
-    status: "View on GitHub",
-    github: "https://github.com/dineshsrisai/RockPaperScissors",
-    live: null,
-  },
-  {
-    title: "Snake and Ladders",
-    subtitle: "Dice-Based Board Game",
-    description:
-      "A Snake and Ladders game built using C++ featuring dice rolls, player movement, snake and ladder mechanics, and win detection.",
-    tech: ["C++"],
-    statusDot: STATUS_COLORS.purple,
-    status: "View on GitHub",
-    github: "https://github.com/dineshsrisai/SnakeandLadders",
-    live: null,
-  },
 ];
 
 export default function Projects() {
