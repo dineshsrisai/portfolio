@@ -16,7 +16,7 @@ const stack = [
     items: ["Node.js", "Express", "Socket.io", "REST APIs"],
     dot: "#30d158",
   },
-  { cat: "Database", items: ["MongoDB", "Mongoose"], dot: "#ff9f0a" },
+  { cat: "Database", items: ["MongoDB"], dot: "#ff9f0a" },
   { cat: "Deployment", items: ["Vercel", "Render"], dot: "#ff453a" },
   {
     cat: "Tools",
