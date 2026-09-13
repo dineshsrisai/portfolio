@@ -49,8 +49,8 @@ const projects = [
     title: "Connect Four",
     subtitle: "Player vs AI",
     description:
-      "C++ implementation of Connect Four with multiplayer support and a Minimax AI using heuristic evaluation for intelligent gameplay and tactical decision-making",
-    tech: ["C++"],
+      "C++ and Qt implementation of Connect Four with a graphical interface and a Minimax AI powered by Alpha-Beta pruning for fast, intelligent move selection",
+    tech: ["C++", "Qt"],
     statusDot: STATUS_COLORS.purple,
     status: "View on GitHub",
     github: "https://github.com/dineshsrisai/connectFour",
@@ -60,7 +60,7 @@ const projects = [
     title: "Sudoku",
     subtitle: "Console Game",
     description:
-      "Console-based Sudoku puzzle solver in C++ with grid validation and constraint-checking logic — built to practice 2D array manipulation and backtracking fundamentals.",
+      "Interactive console-based Sudoku game in C++ with puzzle generation (unique-solution validated), a backtracking solver, hints, and save/load with autosave on exit",
     tech: ["C++"],
     statusDot: STATUS_COLORS.purple,
     status: "View on GitHub",
